@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>JavaScript Example</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+	
+</head>
+
+<body>
+	
+	<p>Which movie am I thinking about right now?</p>
+	<ol>
+		
+		<li>The Dark knight</li>
+		<li>Shawshanks Redemption</li>
+		<li>Inception</li>
+		<li>The Godfather</li>
+		<li>The Prestige</li>
+		
+	
+	</ol>
+	<input id="movie" />
+	<button id="movieButton">Let's see what ya got!</button>
+	
+	
+	<script type="text/javascript">
+	
+			var movieArray = ["The Dark knight", "Shawshanks Redemption", "Inception", "The Godfather", "The Prestige"];
+			
+			var movie = movieArray[Math.floor(Math.random()*movieArray.length)];
+			
+			
+			document.getElementById("movieButton").onclick = function(){
+				
+				if(movie ==(document.getElementById("movie").value)){
+					
+					alert('You guessed it right!' );
+				
+				}else {
+					
+					alert('Sorry you guessed wrong! The movie was ' + movie);
+				}
+			
+			}	
+	
+	</script>
+	
+</body>
+</html>

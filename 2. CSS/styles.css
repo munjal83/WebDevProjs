@@ -1,0 +1,303 @@
+		body{
+			
+			font-family: "Helvetica Neue",Helvetica,Arial,"Nimbus Sans L",sans-serif;
+			font-size: 0.9em;
+			margin : 0;
+			line-height:16px;
+			background-color: #EBEBEB;
+		
+		}
+		
+		a{
+		
+			text-decoration : none;
+			
+		}
+		ul {
+			list-style-type: none;
+			
+			}
+		
+		a:link {
+			color: #282E5C;
+				}
+
+
+		a:visited {
+			color: #282E5C;
+					}
+
+
+		a:hover {
+			color: #FF00FF;
+				}	
+
+
+		a:active {
+			color: #0000FF;
+				}
+		#header-bar{
+				
+			margin : 0;
+			padding : 0;
+			height : 30px;
+			width: 100%;
+			background-color: #111111;
+			border-bottom : 1px inset #333333;
+			box-shadow : 5px 5px 5px #333333
+			
+		}		
+		
+		#top-bar{
+				
+			margin : 0;
+			padding : 0;
+			height : 90px;
+			width: 100%;
+			background-color: #111111;
+			
+			
+			
+		}
+		.fixed-width{
+		
+			width : 1200px;
+			margin : 0 auto;
+		
+		}
+	
+		#logo{
+			
+			padding: 5px 400px 5px 0;
+			float : left;
+			
+			
+		}
+		
+	
+		
+		#connect{
+		
+			color: silver;
+			padding : 30px 3px 30px 0;
+			float : left;
+		}
+		
+		#facebook{
+			
+			margin : 0;
+			padding : 28px 5px 35px 5px;
+			float : left;
+			
+		}
+		
+		#twitter{
+			
+			margin : 0;
+			padding : 28px 10px 35px 5px;
+			float : left;
+		}
+		#search{
+			
+			margin : 0;
+			padding : 25px 10px 20px 15px;
+			float: left;
+			
+		}
+		input{
+			padding: 5px 5px 5px 5px;
+			margin: 0;
+			width: 120px;
+			height: 23px;
+			border : 0 solid #444444;
+			border-radius : 3px;
+			background-color: #444444;
+			font-size : 1.2em;
+			background-image: url("images/search.jpeg");
+			background-repeat: no-repeat;
+			background-position: right center;
+			float left;
+		}
+		#signin{
+			
+			margin : 0;
+			padding : 10px 20px 20px 5px;
+			float : left;
+		
+		}
+	
+	
+		#signin li{
+			list-style: none;
+			margin:0;
+			padding : 10px 5px 10px 5px;
+			border: 1px solid #333333;
+			border-radius: 3px;
+			color: silver;
+			float: left;
+			font: 0.9em
+			font-weight : bold;
+			height: 100%;
+			
+		
+		}
+		.clear{
+			
+			clear : both;
+		
+		}
+		#middle-bar{
+				
+			margin : 0;
+			padding : 0;
+			height : 40px;
+			width: 100%;
+			border-top : 1px solid #333333;
+			background-color: #111111;
+			
+			
+		}
+		#middle-list li{
+		
+		margin: 0;
+		list-style : none;
+		float: left;
+		padding: 0 20px 5px 10px;
+		font-size: 1.3em;
+		
+		}
+		
+		.genmenu{
+			
+			color : silver;
+		
+		}
+		.specialmenu{
+		
+			color : #C49C00;
+		}
+		
+		#bottom-bar{
+				
+			margin : 0;
+			padding : 0;
+			height : 40px;
+			width: 100%;
+			background-color: #111111;
+			border-top : 1px solid #333333;
+			box-shadow: 5px 5px 5px #888888;
+	}
+		#bottom-list li{
+		
+			margin: 0;
+			list-style : none;
+			float: left;
+			padding: 0 15px 0 10px;
+			font-size: 0.9em;
+			border-right : 1px solid #333333;
+		
+		}
+		
+		.article{
+			
+			padding-left: 130px ;
+			float:left;
+			width: 700px;
+			height: 480px;
+		
+		}
+		
+		.article p{
+			
+			margin: 0;
+			padding: 25px 30px 20px 30px;
+			text-align: left;
+			font-size : 1.5em;
+			font-weight: bold;
+			background-color: #F8F8F8;
+			float left;
+		}
+		
+		.description {
+			
+			padding: 0 ;
+			float:left;
+		
+		}
+		
+		.description p{
+			
+			margin: 0;
+			padding: 15px 30px 30px 30px;
+			text-align: left;
+			font-size : 1em;
+			background-color: #F8F8F8;
+			float: left;
+		}
+			
+		.description p img{
+			
+			
+			float : right;
+			padding : 0;
+		
+		}
+		
+		#side-bar{
+			padding : 0;
+			margin : 0;
+			position: absolute;
+			left : 830px;
+			width: 330px;
+			height : 100%;
+			background-color: #E0E0E4;
+			
+		
+		}
+		
+		#side-bar h2{
+			
+			padding : 20px;
+			color : #9E8A8D;
+			
+
+		}
+		
+		#side-bar li{
+				padding-bottom: 20px;
+				font-size : 1.1em;	
+				font-weight : bold;
+				padding-left : 20px;
+				
+
+				
+		
+		}	
+
+		#side-bar img{
+		
+		padding : 0;
+		margin : 0;
+		
+		
+		}
+		
+		#photoday{
+			
+			padding : 20px;
+			margin : 0;
+			width : 330;
+			height : 75px;
+			font-size : 1.1em;
+			font-weight : bold;
+			background-color : white;
+		
+			
+			}
+		
+		#photoday span{
+		
+			font-size: 0.7em;
+			color :  #282E5C;
+		
+		}

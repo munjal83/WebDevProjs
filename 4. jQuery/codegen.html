@@ -1,0 +1,218 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Code Generator</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<script type="text/javascript" src = "jquery.min.js"></script>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+	
+    <style type="text/css">
+	
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+			font-weight: 300;
+		
+		}
+		
+		body, html{
+		
+			
+			height: 100%;
+			width: 100%;
+
+		}
+		
+		#langMenu{
+			
+			width: 100%;
+			height: 50px;
+			background-color:#F4F4F4;
+			border-bottom: 1px solid gray;
+		}
+		#logo{
+			
+			float:left;
+			font-size: 1.5em;
+			font-weight: bold;
+			color: red;
+			padding: 10px 0 5px 20px;
+		
+		}
+		
+		#runButton{
+			
+			float: right;
+			font-size: 1.3em;
+			margin: 10px 25px 5px 0;
+		
+		}
+		
+		#languageList{
+			
+			width: 213px;
+			margin: 0 auto;
+			list-style: none;
+			border: 1px solid grey;
+			border-radius:3px;
+			height: 27px;
+			padding: 0;
+			position: relative;
+			top: 10px;
+
+		}
+		#languageList li{
+			
+			
+			float: left;
+			border-right: 1px solid grey;
+			padding: 5px 7px;
+		}
+		
+		.clear{
+			
+			clear: both;
+		}
+		
+		.codeContainer{
+			
+			height: 100%;
+			float: left;
+			position: relative;
+			
+		}
+		
+		.codeContainer textarea{
+		
+			width: 100%;
+			height: 100%;
+			border: none;
+			border-right: 1px solid grey;
+			font-family: monotype;
+			font-size: 90%;
+			padding: 10px;
+			box-sizing: border-box;
+		
+		}
+	
+		.codeLabel{
+			
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			
+		
+		}
+		
+		#cssContainer, #jsContainer{
+			
+			display: none;
+		
+		}
+		
+		
+		iframe{
+			
+			height: 100%;
+			position: relative;
+			left: 20px;
+			border: none;
+		
+		}
+		
+		.selected{
+			
+			background-color: grey;
+		
+		}
+		
+    </style>    
+</head>
+
+<body>
+<div id="wrapper">
+
+	<div id="langMenu">
+	
+	<div id="logo">CodeGen</div>
+	
+	<button id="runButton">RUN</button>
+		
+		<ul id="languageList">
+		
+		<li class="toggle selected">HTML</li>
+		<li class="toggle">CSS</li>
+		<li class="toggle">JS</li>
+		<li class="toggle selected" style="border-style: none" >Console</li>
+	
+	</ul>
+	</div>
+	
+	<div class="clear"></div>
+	
+		<div class="codeContainer" id="HTMLContainer">
+		<div class="codeLabel">HTML</div>
+		<textarea>example</textarea>
+	</div>
+	
+	<div class="codeContainer" id="CSSContainer">
+		<div class="codeLabel">CSS</div>
+		<textarea>example</textarea>
+	</div>
+	
+	<div class="codeContainer" id="JSContainer">
+		<div class="codeLabel">JS</div>
+		<textarea>example</textarea>
+	</div>
+	
+	<div class="codeContainer" id="ConsoleContainer">
+		<div class="codeLabel">Console</div>
+		
+		<iframe></iframe>
+	</div>
+	
+
+
+   
+</div>
+
+<script>
+	
+	var windowHeight = $(window).height();
+	var langMenuHeight = $("#langMenu").height();
+	
+	var codeContainerHeight = windowHeight - langMenuHeight;
+	
+	$(".codeContainer").height(codeContainerHeight+"px");
+	
+	$(".toggle").click(function(){
+	
+		$(this).toggleClass("selected");
+		
+		var activeDiv = $(this).html();
+		
+		$("#"+activeDiv+"Container").toggle();
+		
+		var showingDivs = $(".codeContainer").filter(function(){
+		
+			return($(this).css("display")!="none");
+		
+		}).length;
+		
+			var width = 100/showingDivs;
+			
+			$(".codeContainers").css("width", width+"%");
+	});
+	
+	
+</script>
+</body>
+</html>

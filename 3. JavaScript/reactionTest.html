@@ -1,0 +1,116 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Reaction Tester</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <style>
+  
+	body{
+		
+		font-family : Verdana;
+	
+	}
+  
+	#redbox{
+		
+		width : 200px;
+		height : 200px;
+		background-color : red;
+		position: relative;
+	}
+	.bold{
+		
+		font-weight = bold;
+	}
+   
+   </style>
+	
+</head>
+
+<body>
+
+	<h1>Test Your Reactions!!</h1>
+	<p class="bold">Your Reaction Time: <span id="timelabel"> 0</span>s</p>
+	<div id ="redbox"></div>
+	
+	
+	
+	<script type="text/javascript">
+	
+	
+		function getRandomColor() {
+				var letters = '0123456789ABCDEF'.split('');
+				var color = '#';
+				for (var i = 0; i < 6; i++ ) {
+				color += letters[Math.floor(Math.random() * 16)];
+				}
+				return color;
+		}
+		
+		var renderTime; 
+		var eraseTime;
+		var reactionTime;
+	
+		function renderBox(){
+			
+			
+		
+			var time = Math.random();
+			time = (time*5000);
+			
+			setTimeout(function(){
+			
+			if(Math.random() > 0.5){
+			
+				document.getElementById("redbox").style.borderRadius = "100px";
+				
+			}else{
+			
+				document.getElementById("redbox").style.borderRadius = "0";
+
+			}
+				var top = Math.random();
+				top = top*300;
+				
+				var left = Math.random();
+				left = left*500;
+				
+				document.getElementById("redbox").style.top = top+"px";
+				
+				document.getElementById("redbox").style.left = left+"px";
+
+				document.getElementById("redbox").style.backgroundColor = getRandomColor();
+			
+				document.getElementById("redbox").style.display = "block";
+				
+				renderTime = Date.now();
+			
+			}, time);
+		}
+	
+		document.getElementById("redbox").onclick = function(){
+		
+		
+			eraseTime = Date.now();
+			reactionTime =(eraseTime - renderTime)/1000;
+			
+			document.getElementById("timelabel").innerHTML = reactionTime;
+			this.style.display = "none";
+			
+			renderBox();
+			
+			
+			
+		
+		}
+			renderBox();
+	
+	</script>
+	
+</body>
+</html>
